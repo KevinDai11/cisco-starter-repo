@@ -8,12 +8,13 @@ const IPRequest = ({url}) => {
     const fetchIp = async () => {
         const response = await fetch(url);
         const data = await response.json();
+
         setIp(data.ip);
     }
 
     useEffect(() => {
         fetchIp();
-    }, [])
+    })
 
 
     return (
